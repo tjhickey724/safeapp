@@ -160,8 +160,15 @@ function isLoggedIn(req, res, next) {
 }
 
 app.get('/',function(req,res){
-  res.render("mainpage")
+  res.render("mainpage",{content:"main"})
     }
 )
+
+
+app.get('/addzip',function(req,res){
+  res.render("mainpage", {content:"addzip"})
+    }
+)
+
 
 module.exports = app;
